@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Multiplayer - 2024</title>
+
+    <link rel="stylesheet" href="./lib/chessboardjs/css/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contain" >
+        <div class="name-box">
+            <h2 class="white">Enter White Player name (Choose Profile if required):- </h2>
+            <input type="text" id="whitetext">
+            <input type="file" accept="image/*" name="" id="wprofile" >
+            <h2 class="black">Enter Black Player name (Choose Profile if required):- </h2>
+            <input type="text" id="blacktext">
+            <input type="file" accept="image/*" name="" id="bprofile">
+            
+            <div class="line"></div>
+            <div class="buttons">
+            <button class="submit">Submit</button>
+            <button onclick="clear()" class="clear">Clear</button>
+        </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div id="board1" ></div>
+        <div class="right">     <div class="black-player">
+        <img src="" id="blackphoto">
+        <h1 class="blackname"></h1>
+    </div>
+    <div class="white-player">
+        <img src="" id="whitephoto">
+ <h1 class="whitename"></h1>
+
+ 
+    </div>
+    <div class="timer-black"><div class="mins">9</div> : <div class="secs">60</div></div> 
+
+    <div class="timer-white"><div class="min">9</div> : <div class="sec">60</div></div>
+</div>
+
+        <div class="endgame">
+            <div class="circle"></div>
+            <div class="cross" onclick="document.querySelector('.endgame').style.display = 'none'">x</div>
+            <div class="white-set"><h2 class="nameWhite"></h2>
+    <h3 class="stateWin"></h3>
+            </div>
+            <div class="black-set"><h2 class="nameBlack"></h2>
+                <h3 class="StateWin"></h3>
+                        </div>
+
+                        <h3 class="winnerTextDisplay"></h3>
+            <button class="replay" onclick="location.reload()">Replay</button>
+        </div>
+        <h1 id="gameOverText"></h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/chessboardjs/js/chessboard-1.0.0.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
